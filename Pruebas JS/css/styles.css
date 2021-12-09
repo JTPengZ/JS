@@ -71,6 +71,10 @@ body {
   width: 50%;
 }
 
+.content__div1--lgrey {
+  background-color: lightgray;
+}
+
 .footer {
   background-color: lightgray;
   margin-top: 10px;

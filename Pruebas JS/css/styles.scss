@@ -52,6 +52,10 @@ body{
         flex-wrap: wrap;
         &1{
             width: 50%;
+
+            &--lgrey{
+                background-color: lightgray;
+            }
         }
     }
 }
