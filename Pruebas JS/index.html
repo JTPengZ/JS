@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+  	<head>
+		<meta charset="utf-8">
+		<title>Pokedex</title>
+		<link rel="stylesheet" type="text/css" href="./css/styles.css">
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+		<script
+			src="https://code.jquery.com/jquery-3.3.1.js"
+			integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+			crossorigin="anonymous">
+		</script>
+		<script type="module" src="./js/js_index.js"></script> 
+	</head>
+	<body>
+		<header>
+			<section class="navbar">
+				<div class="navbar__principal">
+					<a id="header_index" href="#home">
+						<img class="navbar__img" src="./img/logo_pokemon.png" alt="Logo Pokemon" ></img>
+					</a>
+				</div>
+				<nav class="navbar__primary">
+					<a id="header_home" class="navbar__link navbar__link--active" href="#home">Home</a>
+					<a id="header_list" class="navbar__link" href="#list">List</a>
+				</nav>
+			</section>
+		</header>
+
+
+		<div id="dynamic_content" class="content">
+			<div>
+				<h1 class="content__h1">Esta página web simula una Pokedex.</h1>
+			</div>
+			<div class="content__div">
+				<div class="content__div1">
+					<h2>Podrás ver una lista de pokémons.</h2>
+					<img class="navbar__img" src="./img/logo_pokemon.png" alt="img_1"/>
+				</div>
+				<div class="content__div1">
+					<h2>Podrás ver los datos de un pokémon en detalle.</h2>
+					<img class="navbar__img" src="./img/logo_pokemon.png" alt="img_2"/>
+				</div>
+			</div>
+		</div>
+
+		<div id="content"></div>
+
+
+		<footer>
+			<section class="footer">
+				<div class="footer__content">
+					<a class="footer__link" href="https://es-es.facebook.com/"><i class="footer__icon fab fa-facebook-square"></i></a>
+					<a class="footer__link" href="https://twitter.com/"><i class="footer__icon fab fa-twitter-square"></i></a>
+					<a class="footer__link" href="https://instagram.com/"><i class="footer__icon fab fa-instagram"></i></a>
+				</div>
+		
+				<div class="footer__content">
+					<p class="footer__p">Copyright © 2021 | Pokemoniaco Inc. Todos los derechos reservados.</p>
+				</div>
+			</section>
+		</footer>
+	</body>
+</html>
