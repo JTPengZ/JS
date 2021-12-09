@@ -1,6 +1,7 @@
 import { requestList } from "./js_list.js";
 
 const menuItem = document.getElementsByClassName("navbar__link");
+const menuLogo = document.getElementById("header_index");
 
 function hoverContent(){
     $(document).ready(function(){
@@ -20,6 +21,16 @@ function addListeners(){
     document.getElementById("btn_1").addEventListener("click", toggleText, false);
 }
 
+function addEventListerner(el){
+    el.addEventListener("click", () => {
+        if(location.hash === el.hash){
+            alert("Ya estas aquí");
+        }else{
+            changeView(el);
+        }
+    });
+}
+
 $(document).ready(function(){
     setTimeout(showWelcome, 2000);
 
@@ -27,15 +38,10 @@ $(document).ready(function(){
 
     addListeners();
 
-    for(let i = 0; i < menuItem.length; i++){
-        menuItem[i].addEventListener("click", () => {
-            if(location.hash === menuItem[i].hash){
-                alert("Ya estas aquí");
-            }else{
-                changeView(menuItem[i]);
-            }
-        });
+    addEventListerner(menuLogo);
 
+    for(let i = 0; i < menuItem.length; i++){
+        addEventListerner(menuItem[i]);
     }
 });
 
@@ -48,6 +54,9 @@ function hoverMenuBar(e){
     //Set all attributes class from menu bar to 'navbar__link'
     for(let i = 0; i < menuItem.length; i++){
         menuItem[i].setAttribute("class", "navbar__link");
+        if(e.hash == menuItem[i].hash){
+            e = menuItem[i];
+        }
     }
     //Add, to the focus link, the attribute class 'navbar__link--active'
     e.setAttribute("class", "navbar__link navbar__link--active");
@@ -182,3 +191,4 @@ function viewList(e){
 function showWelcome(){
     alert("Bienvenido a la página web Pokemoniaco");
 }
+

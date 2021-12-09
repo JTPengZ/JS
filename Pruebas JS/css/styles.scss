@@ -79,4 +79,10 @@ body{
         margin-left: 5px;
         margin-right: 5px;
     }
+
+    &__map{
+        height: 400px;
+        /* The height is 400 pixels */
+        width: 100%;
+    }
 }

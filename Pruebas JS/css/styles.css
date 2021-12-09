@@ -96,4 +96,10 @@ body {
   margin-left: 5px;
   margin-right: 5px;
 }
+
+.footer__map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+}
 /*# sourceMappingURL=styles.css.map */
