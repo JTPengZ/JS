@@ -75,6 +75,18 @@ body {
   background-color: lightgray;
 }
 
+.content__img {
+  width: 200px;
+  height: auto;
+}
+
+.content__p {
+  font-size: larger;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .footer {
   background-color: lightgray;
   margin-top: 10px;

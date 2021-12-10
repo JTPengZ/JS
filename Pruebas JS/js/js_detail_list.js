@@ -7,13 +7,13 @@ function itemClicked(evt){
 
     let div = document.getElementById("content");
 
-
     let div__root = document.createElement("div");
     div__root.setAttribute("id", "dynamic_content");
     div__root.setAttribute("class", "content");
 
     let div_1 = document.createElement("div");
-    div_1.setAttribute("class", "content__div");    
+    div_1.setAttribute("class", "content__div");
+
     let div_2;
     let h2_1_list;
     let text_h2_1;
@@ -22,7 +22,6 @@ function itemClicked(evt){
     let h3_2_list;
     let text_h3_2;
     let img_1_list;
-
     div_2 = document.createElement("div");
     div_2.setAttribute("class", "content__div1");
 
@@ -30,7 +29,7 @@ function itemClicked(evt){
     text_h2_1 = document.createTextNode(list.getName().toUpperCase());
     h2_1_list.appendChild(text_h2_1);
     img_1_list = document.createElement("img");
-    img_1_list.setAttribute("class", "navbar__img");
+    img_1_list.setAttribute("class", "content__img");
     img_1_list.setAttribute("src", list.getImage());
     img_1_list.setAttribute("alt", "img_poke_" + list.getName());
     
