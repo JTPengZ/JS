@@ -8,7 +8,7 @@ function itemClicked(evt){
     let div = document.getElementById("content");
 
     let div__root = document.createElement("div");
-    div__root.setAttribute("id", "dynamic_content");
+    div__root.setAttribute("id", "content_dynamic");
     div__root.setAttribute("class", "content");
 
     let div_1 = document.createElement("div");
