@@ -5,20 +5,32 @@ const menuLogo = document.getElementById("navbar_index");
 //Variable to show less or more information
 let status = "less";
 
+function initEvents(){
+    //Event Listeners for Content and for Button See More
+    addEventListeners();
+
+    //Event Listeners for Navigation Button
+    addEventListerner(menuLogo);
+    for(let i = 0; i < menuItem.length; i++){
+        addEventListerner(menuItem[i]);
+    }
+
+    //Welcome Alert
+    setTimeout(showWelcome, 2000);
+}
+
 function addEventListeners(){
-    $(function(){
-        let index = document.getElementById("content_dynamic");
+    let index = document.getElementById("content_dynamic");
 
-        index.addEventListener("mouseover", event => {
-            event.target.style.backgroundColor = "lightGrey";
-        });
-
-        index.addEventListener("mouseout", event => {
-            event.target.style.backgroundColor = "";
-        });
-
-        document.getElementById("content_btn_1").addEventListener("click", toggleText, false);
+    index.addEventListener("mouseover", event => {
+        event.target.style.backgroundColor = "lightGrey";
     });
+
+    index.addEventListener("mouseout", event => {
+        event.target.style.backgroundColor = "";
+    });
+
+    document.getElementById("content_btn_1").addEventListener("click", toggleText, false);
 }
 
 function addEventListerner(el){
@@ -36,20 +48,13 @@ function showWelcome(){
     alert("Bienvenido a la página web Pokemoniaco");
 }
 
-$(function(){
-    //Event Listeners for Content and for Button See More
-    addEventListeners();
-
-    //Event Listeners for Navigation Button
-    addEventListerner(menuLogo);
-    for(let i = 0; i < menuItem.length; i++){
-        addEventListerner(menuItem[i]);
-    }
-
-    //Welcome Alert
-    setTimeout(showWelcome, 2000);
-
-});
+if (document.readyState !== 'loading') {   
+    initEvents();
+} else{
+    document.addEventListener("DOMContentLoaded", function(){
+        initEvents();
+    });
+}
 
 function changeView(e){
     location.hash === "#home" || location.hash === "" ?
