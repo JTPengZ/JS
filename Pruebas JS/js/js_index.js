@@ -6,7 +6,7 @@ const menuLogo = document.getElementById("navbar_index");
 let status = "less";
 
 function addEventListeners(){
-    $(document).ready(function(){
+    $(function(){
         let index = document.getElementById("content_dynamic");
 
         index.addEventListener("mouseover", event => {
@@ -36,10 +36,7 @@ function showWelcome(){
     alert("Bienvenido a la página web Pokemoniaco");
 }
 
-$(document).ready(function(){
-    //Welcome Alert
-    setTimeout(showWelcome, 2000);
-
+$(function(){
     //Event Listeners for Content and for Button See More
     addEventListeners();
 
@@ -48,6 +45,10 @@ $(document).ready(function(){
     for(let i = 0; i < menuItem.length; i++){
         addEventListerner(menuItem[i]);
     }
+
+    //Welcome Alert
+    setTimeout(showWelcome, 2000);
+
 });
 
 function changeView(e){
